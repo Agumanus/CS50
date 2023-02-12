@@ -7,7 +7,6 @@ long typeCC(long cc);
 
 int main(void) 
 {
-    //long ccNumber = 4003600000000014;
     long ccNumber = get_long("Which number would you like to be checked? ");
 
     // get length of cc number
