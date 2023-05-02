@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Transaction</th>
+                <th>Transaction Time</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction.type }}</td>
+                <td>{{ transaction.timestamp }}</td>
+                <td>{{ transaction.symbol }}</td>
+                <td>{{ transaction.number }}</td>
+                <td>{{ transaction.price | usd }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
